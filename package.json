@@ -1,0 +1,28 @@
+{
+  "name": "twitbox-client",
+  "version": "0.1.0",
+  "description": "Web client for twitbox",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/twitbox/twitbox-client.git"
+  },
+  "keywords": [
+    "twitter",
+    "sentiment",
+    "nlp",
+    "language",
+    "2016",
+    "presidential",
+    "candidates"
+  ],
+  "author": "Jimmy Gong <gong.jim@gmail.com> (http://jimmyg.xyz)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/twitbox/twitbox-client/issues"
+  },
+  "homepage": "https://github.com/twitbox/twitbox-client#readme"
+}
