@@ -8,12 +8,14 @@ class App extends Component {
     return (
       <main className="main">
         <NavBar />
+        { this.props.children }
       </main>
     );
   }
 }
 
 App.propTypes = {
+  children: PropTypes.node
 };
 
 App.defaultProps = {

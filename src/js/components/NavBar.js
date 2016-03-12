@@ -12,6 +12,13 @@ class NavBar extends Component {
             </span>
           </Link>
         </div>
+        <div className="nav-about-button">
+          <Link to="/about">
+            <span className="header-title ">
+              About
+            </span>
+          </Link>
+        </div>
       </header>
     );
   }
