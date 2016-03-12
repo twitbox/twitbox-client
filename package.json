@@ -4,6 +4,7 @@
   "description": "Web client for twitbox",
   "main": "index.js",
   "scripts": {
+    "start": "node server",
     "test": "mocha test"
   },
   "repository": {
@@ -31,6 +32,8 @@
     "react": "^0.14.0",
     "react-dom": "^0.14.0",
     "react-redux": "^4.0.0",
+    "react-router": "^2.0.1",
+    "react-router-redux": "^4.0.0",
     "redux": "^3.0.0"
   },
   "devDependencies": {

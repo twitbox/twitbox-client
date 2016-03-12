@@ -1,23 +1,15 @@
 import 'babel-core/polyfill';
 import React from 'react';
 import { render } from 'react-dom';
-import { Provider } from 'react-redux';
+import { browserHistory } from 'react-router';
+import { syncHistoryWithStore } from 'react-router-redux'
 import configureStore from './store/configureStore';
-import App from './containers/App';
-import '../styles/less/main.less';
+import Root from './containers/Root';
 
 const store = configureStore();
-
-// Enable hot reloading of styles
-if(module.hot) {
-  module.hot.accept('../styles/less/main.less', function() {
-    require('../styles/less/main.less');
-  });
-}
+const history = syncHistoryWithStore(browserHistory, store);
 
 render(
-  <Provider store={store}>
-    <App />
-  </Provider>,
+  <Root store={ store } history={ history } />,
   document.getElementById('root')
 );
