@@ -1,11 +1,14 @@
 import React, { Component, PropTypes } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
+import NavBar from '../components/NavBar';
 
 class App extends Component {
   render() {
     return (
-      <div>Base</div>
+      <main className="main">
+        <NavBar />
+      </main>
     );
   }
 }
