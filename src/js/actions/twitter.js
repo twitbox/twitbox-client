@@ -1,4 +1,4 @@
-import types from '../constants/placeholder';
+import types from '../constants/twitter';
 
 const actions = {
 };
