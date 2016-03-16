@@ -6,7 +6,7 @@ class Home extends Component {
   render() {
     return (
       <div>
-        <CandidateView />
+        <CandidateView candidates={ this.props.candidates } />
         <MapView />
       </div>
     );
