@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from 'react';
+import cx from 'classnames';
 
 class PartyView extends Component {
   render() {
@@ -7,8 +8,13 @@ class PartyView extends Component {
     // const candidateModals = candidates.map(item => {
     //   // blahblah
     // });
+    const classname = cx({
+      'd-panel': partyName[0] === 'D',
+      'r-panel': partyName[0] === 'R',
+      'party-panel': true
+    });
     return (
-      <div className="party-panel">
+      <div className={ classname }>
         <div>
           <img className={ partyName.toLowerCase() + '-icon' } />
           <span>{ partyName }</span>
