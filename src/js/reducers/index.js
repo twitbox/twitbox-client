@@ -1,9 +1,9 @@
 import { combineReducers } from 'redux';
 import { routerReducer } from 'react-router-redux';
-import placeholder from './placeholder';
+import twitter from './twitter';
 
 const rootReducer = combineReducers({
-  placeholder,
+  twitter,
   routing: routerReducer
 });
 
