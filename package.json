@@ -27,7 +27,6 @@
   },
   "homepage": "https://github.com/twitbox/twitbox-client#readme",
   "dependencies": {
-    "classnames": "^2.1.2",
     "d3": "^3.5.14",
     "react": "^0.14.0",
     "react-dom": "^0.14.0",
