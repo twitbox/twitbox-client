@@ -8,10 +8,10 @@ class PartyView extends Component {
     //   // blahblah
     // });
     return (
-      <div>
+      <div className="party-panel">
         <div>
-          <img className={partyName + '-icon'} />
-          <span>{partyName}</span>
+          <img className={ partyName.toLowerCase() + '-icon' } />
+          <span>{ partyName }</span>
         </div>
         {'TODO: Insert list of candidate models'}
       </div>
