@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import PartyView from './PartyView';
 
-class CandidateView extends Component {
+class MainFeed extends Component {
   render() {
     const partySplit = this.props.candidates.reduce((p, c) => {
       if (c.party === 'Democrat') p.democrat.push(c);
@@ -23,7 +23,7 @@ class CandidateView extends Component {
   }
 }
 
-CandidateView.propTypes = {
+MainFeed.propTypes = {
 };
 
-export default CandidateView;
+export default MainFeed;
