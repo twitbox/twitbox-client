@@ -7,10 +7,12 @@ class App extends Component {
   render() {
     const { children, candidates } = this.props;
     return (
-      <main className="main">
+      <div>
         <NavBar />
-        { cloneElement(children, { candidates }) }
-      </main>
+        <main className="main">
+          { cloneElement(children, { candidates }) }
+        </main>
+      </div>
     );
   }
 }
