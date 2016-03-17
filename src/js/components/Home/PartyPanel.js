@@ -1,13 +1,23 @@
 import React, { Component, PropTypes } from 'react';
 import cx from 'classnames';
+import CandidateEntry from './CandidateEntry';
 
-class PartyView extends Component {
+class PartyPanel extends Component {
   render() {
     const { partyName, candidates } = this.props;
     // Create list of candiate modals
-    // const candidateModals = candidates.map(item => {
-    //   // blahblah
-    // });
+    const candidateEntries = candidates.map(item => {
+      const { name, positive, negative, volume, mostCommonHashtag } = item;
+      return (
+        <CandidateEntry 
+          name={ name }
+          positive={ positive }
+          negative={ negative }
+          volume={ volume }
+          mostCommonHashtag={ mostCommonHashtag }
+        />
+      );
+    });
     const classname = cx({
       'd-panel': partyName[0] === 'D',
       'r-panel': partyName[0] === 'R',
@@ -15,23 +25,23 @@ class PartyView extends Component {
     });
     return (
       <div className={ classname }>
-        <div>
+        <div className="party-panel-title">
           <img className={ partyName.toLowerCase() + '-icon' } />
           <span>{ partyName }</span>
         </div>
-        {'TODO: Insert list of candidate models'}
+        { candidateEntries }
       </div>
     );
   }
 }
 
-PartyView.propTypes = {
+PartyPanel.propTypes = {
   partyName: PropTypes.string.isRequired,
   candidates: PropTypes.arrayOf(PropTypes.object).isRequired
 };
 
-PartyView.defaultProps = {
+PartyPanel.defaultProps = {
   candidates: []
 };
 
-export default PartyView;
+export default PartyPanel;

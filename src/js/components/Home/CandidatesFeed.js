@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
-import PartyView from './PartyView';
+import PartyPanel from './PartyPanel';
 
-class MainFeed extends Component {
+class CandidatesFeed extends Component {
   render() {
     const partySplit = this.props.candidates.reduce((p, c) => {
       if (c.party === 'Democrat') p.democrat.push(c);
@@ -9,12 +9,12 @@ class MainFeed extends Component {
       return p;
     }, { democrat: [], republican: [] })
     return (
-      <div>
-        <PartyView 
+      <div className='feed-container'>
+        <PartyPanel 
           partyName="Democrat"
           candidates={ partySplit.democrat }
         />
-        <PartyView 
+        <PartyPanel 
           partyName="Republican"
           candidates={ partySplit.republican }
         />
@@ -23,7 +23,7 @@ class MainFeed extends Component {
   }
 }
 
-MainFeed.propTypes = {
+CandidatesFeed.propTypes = {
 };
 
-export default MainFeed;
+export default CandidatesFeed;
