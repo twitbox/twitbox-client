@@ -6,28 +6,49 @@
   min-height: 100%;
   width: 50%;
   box-sizing: border-box;
-  padding: 5px;
+  padding: 15px 5px 5px 5px;
   display: -webkit-flex;
   display: flex;
   -webkit-flex-direction: column;
   flex-direction: column;
-  -webkit-justify-content: center;
-  justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+  font-size: larger;
+  font-weight: 500;
 }
 
 .party-panel-title {
-  margin: auto;
-  // flex: 1;
 }
 
 .d-panel {
-  background-color: #007ee5;
+  color: #3b5998;
+  // background-color: rgba(0,0,255, 0.07);
 }
 
 .r-panel {
-  background-color: #ef3525;
+  color: #b41f27;
+  // background-color: rgba(255,0,0, 0.07);
+}
+
+.d-panel .candidate-entry {
+  border-color: #007ee5;
+}
+
+.r-panel .candidate-entry {
+  border-color: #ef3525;
 }
 
 .candidate-entry {
+  text-transform: uppercase;
+  border-style: solid;
+  border-color: black;
+  border-width: 3px;
+  border-radius: 5px;
+  background-color: #fafafa;
   flex: 1;
+  width: 80%;
+  padding: 1em;
+  margin: 0.5em;
+  height: 5em;
+  max-height: 5em;
 }
