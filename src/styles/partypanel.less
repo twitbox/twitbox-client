@@ -1,21 +1,23 @@
 .feed-container {
-  display: table;
-  width: 100%;
+  display: flex;
 }
 
 .party-panel {
-  border-style: solid;
-  border-color: black;
-  border-width: 1px;
   min-height: 100%;
   width: 50%;
   box-sizing: border-box;
-  display: table-cell;
   padding: 5px;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: center;
+  justify-content: center;
 }
 
 .party-panel-title {
   margin: auto;
+  // flex: 1;
 }
 
 .d-panel {
@@ -24,4 +26,8 @@
 
 .r-panel {
   background-color: #ef3525;
+}
+
+.candidate-entry {
+  flex: 1;
 }
