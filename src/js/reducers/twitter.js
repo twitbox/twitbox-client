@@ -1,5 +1,5 @@
 import seedData from './data/seed';
-import { MOCK_CHANGE } from '../constants/Twitter';
+import { MOCK_CHANGE } from '../constants/twitter';
 
 const initialState = seedData.candidates;
 
