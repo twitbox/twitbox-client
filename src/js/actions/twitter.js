@@ -1,4 +1,4 @@
-import types from '../constants/Twitter';
+import types from '../constants/twitter';
 
 const actions = {
   mockChange: () => {
