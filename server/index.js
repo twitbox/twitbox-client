@@ -16,7 +16,7 @@ app.use(webpackHotMiddleware(compiler));
 
 app.get('/', function(req, res) {
   res.sendFile('index.html', { root: STATIC_PATH});
-})
+});
 
 app.server = app.listen(port, function(error) {
   if (error) {
