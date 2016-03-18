@@ -2,15 +2,20 @@ import React, { Component, PropTypes, cloneElement } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import NavBar from '../components/NavBar';
+import TwitterActions from '../actions/twitter';
 
 class App extends Component {
+  componentDidMount() {
+    const mockInterval = setInterval(this.props.actions.mockChange, 2000);
+  }
   render() {
-    const { children, candidates } = this.props;
+    const { children, candidates, actions } = this.props;
+    console.log('rerender');
     return (
       <div>
         <NavBar />
         <main className="main">
-          { cloneElement(children, { candidates }) }
+          { cloneElement(children, { candidates, actions }) }
         </main>
       </div>
     );
@@ -29,6 +34,7 @@ function mapStateToProps(state) {
 }
 function mapDispatchToProps(dispatch) {
   return {
+    actions: bindActionCreators(TwitterActions, dispatch)
   };
 }
 

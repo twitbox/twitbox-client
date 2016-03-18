@@ -4,16 +4,20 @@ import MapView from '../components/Home/MapView';
 
 class Home extends Component {
   render() {
+    const { actions, candidates } = this.props;
     return (
       <div>
-        <CandidatesFeed candidates={ this.props.candidates } />
+        <CandidatesFeed candidates={ candidates } />
         <MapView />
+        <button onClick={actions.mockChange}>Click Me</button>
       </div>
     );
   }
 }
 
 Home.propTypes = {
+  candidates: PropTypes.arrayOf(PropTypes.object),
+  actions: PropTypes.object
 };
 
 export default Home;
