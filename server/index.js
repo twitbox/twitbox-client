@@ -11,7 +11,10 @@ var STATIC_PATH = path.join(__dirname, '../');
 var port = process.env.PORT || 3000
 
 var compiler = webpack(config);
-app.use(webpackDevMiddleware(compiler, { noInfo: true, publicPath: config.output.publicPath }));
+app.use(webpackDevMiddleware(compiler, {
+  noInfo: true,
+  publicPath: config.output.publicPath
+}));
 app.use(webpackHotMiddleware(compiler));
 
 app.get('/', function(req, res) {
