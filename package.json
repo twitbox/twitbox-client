@@ -7,6 +7,9 @@
     "start": "node server",
     "test": "mocha test"
   },
+  "engines": {
+    "node": "5.1.1"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/twitbox/twitbox-client.git"
