@@ -2,7 +2,7 @@
   "name": "twitbox-client",
   "version": "0.1.0",
   "description": "Web client for twitbox",
-  "main": "index.js",
+  "main": "server/index.js",
   "scripts": {
     "start": "node server",
     "test": "mocha test"
