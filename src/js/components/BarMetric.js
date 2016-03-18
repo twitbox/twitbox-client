@@ -7,7 +7,7 @@ class BarMetric extends Component {
     return (
       <div className='bar-container'>
         <span className='bar-label'>
-          { `${label}: ${fillPercent}%` }
+          { `${label}: ${fillPercent.toFixed(2)}%` }
         </span>
         <svg
           className='bar-svg'
