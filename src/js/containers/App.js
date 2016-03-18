@@ -6,11 +6,10 @@ import TwitterActions from '../actions/twitter';
 
 class App extends Component {
   componentDidMount() {
-    const mockInterval = setInterval(this.props.actions.mockChange, 2000);
+    const mockInterval = setInterval(this.props.actions.mockChange, 1000);
   }
   render() {
     const { children, candidates, actions } = this.props;
-    console.log('rerender');
     return (
       <div>
         <NavBar />

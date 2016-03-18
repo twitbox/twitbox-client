@@ -9,7 +9,6 @@ class Home extends Component {
       <div>
         <CandidatesFeed candidates={ candidates } />
         <MapView />
-        <button onClick={actions.mockChange}>Click Me</button>
       </div>
     );
   }
