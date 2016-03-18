@@ -6,10 +6,11 @@ class PartyPanel extends Component {
   render() {
     const { partyName, candidates } = this.props;
     // Create list of candiate modals
-    const candidateEntries = candidates.map(item => {
+    const candidateEntries = candidates.map((item, i) => {
       const { name, positive, negative, volume, mostCommonHashtag } = item;
       return (
-        <CandidateEntry 
+        <CandidateEntry
+          key={`candidate-entry_${i}_${name}`}
           name={ name }
           positive={ positive }
           negative={ negative }

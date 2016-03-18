@@ -1,19 +1,17 @@
 import React, { Component, PropTypes } from 'react';
-import { BarMetric } from 'react-simple-charts';
+import BarMetric from '../BarMetric';
+import Clinton from '../../../images/Clinton.png';
 
 class CandidateEntry extends Component {
   render() {
     const { name, positive, negative, volume, mostCommonHashtag } = this.props;
-    console.log(positive);
     return (
       <div className='candidate-entry'>
-        {name}
-        <BarMetric 
-          metricName={''}
-          value={`${positive.percent}% positive`}
-          percent={positive.percent}
-          label={'sentiment'}
-        />
+        <div className='name-bar-wrapper'>
+          <span className='candidate-name'>{ name }</span>
+          <BarMetric fillPercent={ positive.percent } />
+        </div>
+        <div className={name.split(' ')[1].toLowerCase()+'-icon'} />
       </div>
     );
   }
@@ -21,8 +19,8 @@ class CandidateEntry extends Component {
 
 CandidateEntry.propTypes = {
   name: PropTypes.string.isRequired,
-  positive: PropTypes.number.isRequired,
-  negative: PropTypes.number.isRequired,
+  positive: PropTypes.object.isRequired,
+  negative: PropTypes.object.isRequired,
   volume: PropTypes.number.isRequired
 };
 
